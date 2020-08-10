@@ -15,4 +15,4 @@
 Создает копию fstab в /root/backup/*
 
 # site-create.sh
-Ничего инетресного, кладет конфиги в /etc/nginx/conf.d
+Ничего интeресного, кладет конфиги в /etc/nginx/conf.d
