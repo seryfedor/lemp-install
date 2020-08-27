@@ -7,7 +7,7 @@
 if [ -z "$1" ]; then
 
 which rsync || yum -y install rsync
-Настройка
+echo "Настройка:"
 echo "Введите адрес удаленного сервера:"
 read addr
 echo "Введите имя пользователя:"
