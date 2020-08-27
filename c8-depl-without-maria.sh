@@ -161,7 +161,35 @@ systemctl disable firewalld
 
 yum -y update
 yum -y install epel-release
-yum -y install mc nano net-tools ncdu yum-utils htop iftop python3-certbot-nginx
+yum -y install mc nano net-tools ncdu yum-utils htop iftop python3-certbot-nginx vsftpd
+
+#vsftpd
+echo "/bin/false" >> /etc/shells
+
+cp /etc/vsftpd/vsftpd.conf /root/backup/
+
+cat > /etc/vsftpd/vsftpd.conf << EOL
+
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/xferlog
+xferlog_std_format=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+listen=YES
+listen_ipv6=NO
+pam_service_name=vsftpd
+userlist_enable=YES
+EOL
+
+systemctl start vsftpd
+systemctl enable vsftpd
+
 
 
 

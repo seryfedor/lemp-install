@@ -61,7 +61,7 @@ location ~ \.(php|htm|html|phtml)$ {
         fastcgi_param  SCRIPT_FILENAME  \$document_root\$fastcgi_script_name;
     }
     
-	location ~* \.(jpeg|jpg|png|gif|bmp|ico|svg|tif|tiff|css|js|htm|html|ttf|otf|webp|woff|txt|csv|rtf|doc|docx|xls|xlsx|ppt|pptx|odf|odp|ods|odt|pdf|psd|ai|eot|eps|ps|zip|tar|tgz|gz|rar|bz2) {
+	location ~* \.(jpeg|jpg|png|gif|bmp|ico|svg|tif|tiff|css|js|ttf|otf|webp|woff|txt|csv|rtf|doc|docx|xls|xlsx|ppt|pptx|odf|odp|ods|odt|pdf|psd|ai|eot|eps|ps|zip|tar|tgz|gz|rar|bz2) {
 	expires      max;
 
            }
